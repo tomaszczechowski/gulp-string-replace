@@ -1,5 +1,5 @@
 # gulp-string-replace [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![dependencies][gulp-string-replace-dependencies-image]][gulp-string-replace-dependencies-url]
-> Replaces strings on files by using string or regex patterns. Works with Gulp 3!
+> Replaces strings in files by using string or regex patterns. Works with Gulp 3!
 
 ## Usage
 
