@@ -27,5 +27,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomaszczechowski/gulp-string-replace/issues"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "replacestream": "^4.0.0",
+    "through2": "^2.0.1"
   }
 }
