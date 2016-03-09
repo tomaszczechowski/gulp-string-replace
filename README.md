@@ -58,7 +58,34 @@ gulp.task('replace_2', function() {
 
 ```
 
-## Release History
+### API
+
+#### replace(string, replacement)
+
+##### string
+Type: `String`
+
+The string to search for.
+
+##### replacement
+Type: `String` or `Function`
+
+The replacement string or function. Called once for each match.
+
+#### replace(regex, replacement)
+
+##### regex
+Type: `RegExp`
+
+More details here: [MDN documentation for RegExp].
+
+##### replacement
+Type: `String` or `Function`
+
+More details here: [MDN documentation for String.replace].
+
+
+#### Release History
  * 2016-03-09   v0.0.1   Initial version of plugin.
 ---
 
