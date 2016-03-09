@@ -17,9 +17,9 @@ gulp.task('replace_1', function() {
 });
 
 gulp.task('replace_2', function() {
-  gulp.src(["./config.js"]) // Every file allown.
-    .pipe(replace(/@env@/g, '$1production'))
-    .pipe(gulp.dest('./build/config.js'))
+  gulp.src(["./index.html"]) // Every file allown.
+    .pipe(replace(/version(={1})/g, '$1v0.2.2'))
+    .pipe(gulp.dest('./build/index.html'))
 });
 
 gulp.task('replace_3', function() {
@@ -86,8 +86,7 @@ More details here: [MDN documentation for String.replace].
 
 
 
-
-#### Release History
+### Release History
  * 2016-03-09  v0.0.1  Initial version of plugin.
 
 
