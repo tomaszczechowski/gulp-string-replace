@@ -1,10 +1,13 @@
 {
   "name": "gulp-string-replace",
   "version": "0.0.1",
-  "description": "Replace strings in files by using string or regex patterns. - DRAFT - READY SOON!",
+  "homepage": "https://github.com/tomaszczechowski/gulp-string-replace#readme",
+  "description": "Replace strings in files by using string or regex patterns.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Tomasz Czechowski",
+    "email": "tomasz@czechowski.pl",
+    "url": "http://www.czechowski.pl"
   },
   "repository": {
     "type": "git",
@@ -21,10 +24,8 @@
     "replace",
     "string"
   ],
-  "author": "Tomasz Czechowski",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomaszczechowski/gulp-string-replace/issues"
-  },
-  "homepage": "https://github.com/tomaszczechowski/gulp-string-replace#readme"
+  }
 }
