@@ -34,7 +34,7 @@ gulp.task('replace_3', function() {
 ```javascript
 gulp.task('replace_1', function() {
   gulp.src(["./config.js"]) // Every file allown.
-    .pipe(replace('@env@', 'production'))
+    .pipe(replace('environment', 'production'))
     .pipe(gulp.dest('./build/config.js'))
 });
 ```
