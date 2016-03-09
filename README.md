@@ -85,12 +85,15 @@ Type: `String` or `Function`
 More details here: [MDN documentation for String.replace].
 
 
+
 #### Release History
- * 2016-03-09   v0.0.1   Initial version of plugin.
----
+ * 2016-03-09  v0.0.1  Initial version of plugin.
+
 
 Task submitted by [Tomasz Czechowski](http://czechowski.pl/)
 
+[MDN documentation for RegExp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+[MDN documentation for String.replace]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_string_as_a_parameter
 [travis-url]: http://travis-ci.org/tomaszczechowski/gulp-string-replace
 [travis-image]: https://secure.travis-ci.org/tomaszczechowski/gulp-string-replace.svg?branch=master
 [npm-url]: https://npmjs.org/package/gulp-string-replace
