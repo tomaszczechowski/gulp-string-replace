@@ -1,4 +1,4 @@
-# gulp-string-replace [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![devdependencies][gulp-string-replace-devdependencies-image]][gulp-string-replace-devdependencies-url]
+# gulp-string-replace [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![dependencies][gulp-string-replace-dependencies-image]][gulp-string-replace-dependencies-url]
 > Replaces strings on files by using string or regex patterns. Works with Gulp 3!
 
 ## Usage
@@ -68,5 +68,5 @@ Task submitted by [Tomasz Czechowski](http://czechowski.pl/)
 [travis-image]: https://secure.travis-ci.org/tomaszczechowski/gulp-string-replace.svg?branch=master
 [npm-url]: https://npmjs.org/package/gulp-string-replace
 [npm-image]: https://badge.fury.io/js/gulp-string-replace.svg
-[gulp-string-replace-devdependencies-image]: https://david-dm.org/tomaszczechowski/gulp-string-replace/dev-status.png
-[gulp-string-replace-devdependencies-url]: https://david-dm.org/tomaszczechowski/gulp-string-replace#info=devDependencies
+[gulp-string-replace-dependencies-image]: https://david-dm.org/tomaszczechowski/gulp-string-replace/status.png
+[gulp-string-replace-dependencies-url]: https://david-dm.org/tomaszczechowski/gulp-string-replace#info=dependencies
