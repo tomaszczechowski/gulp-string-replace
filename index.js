@@ -1,4 +1,4 @@
-/*
+/**
  * Gulp String Replace
  * https://github.com/tomaszczechowski/gulp-string-replace
  *
@@ -8,11 +8,12 @@
 
 'use strict';
 
-var through = require('through2');
-var rs = require('replacestream');
-var gutil = require('gulp-util');
+var through = require('through2')
+  , rs = require('replacestream')
+  , gutil = require('gulp-util');
 
 module.exports = function (replaceFrom, replaceTo) {
+
   var log = function (result, from, to, fileName) {
     var _result = result ? 'Replaced' : gutil.colors.red('Not Replaced');
 

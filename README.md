@@ -87,6 +87,7 @@ More details here: [MDN documentation for String.replace].
 
 
 ### Release History
+ * 2016-09-09  v0.1.1  Reorganization of files along with minor cosmetic changes.
  * 2016-03-09  v0.1.0  Initial version of plugin.
 
 
