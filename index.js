@@ -12,13 +12,14 @@ var through = require('through2')
   , rs = require('replacestream')
   , gutil = require('gulp-util');
 
-module.exports = function (replaceFrom, replaceTo) {
+module.exports = function (replaceFrom, replaceTo, disableLog) {
 
   var log = function (result, from, to, fileName) {
-    var _result = result ? 'Replaced' : gutil.colors.red('Not Replaced');
+    if(!disableLog) {
+      var _result = result ? 'Replaced' : gutil.colors.red('Not Replaced');
 
-    gutil.log(_result + ' ' + gutil.colors.cyan(from) + (to ? (' to ' + gutil.colors.cyan(to)) : '') + ' in file: ' + gutil.colors.magenta(fileName));
-
+      gutil.log(_result + ' ' + gutil.colors.cyan(from) + (to ? (' to ' + gutil.colors.cyan(to)) : '') + ' in file: ' + gutil.colors.magenta(fileName));
+    }
     return true;
   };
 
@@ -28,14 +29,10 @@ module.exports = function (replaceFrom, replaceTo) {
     var _replaceTo = function (replacement) {
       if (typeof replaceTo === 'function') {
         var replaceFunctionResult = replaceTo.call(replaceTo, replacement);
-
         log(true, replacement, replaceFunctionResult, fileName);
-
         return replaceFunctionResult;
       }
-
       log(true, replacement, replaceTo, fileName);
-
       return replaceTo;
     };
 
