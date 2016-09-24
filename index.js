@@ -10,12 +10,23 @@
 
 var through = require('through2')
   , rs = require('replacestream')
-  , gutil = require('gulp-util');
+  , gutil = require('gulp-util')
+  , extend = require('extend');
 
-module.exports = function (replaceFrom, replaceTo) {
+var defaultOptions = {
+  logs: {
+    enabled: true,
+    notReplaced: true
+  }
+};
+
+module.exports = function (replaceFrom, replaceTo, userOptions) {
+  var options = extend(true, {}, defaultOptions, userOptions);
 
   var log = function (result, from, to, fileName) {
-    var _result = result ? 'Replaced' : gutil.colors.red('Not Replaced');
+    if (!options.logs.enabled || (!options.logs.notReplaced && !result)) return;
+
+    var _result = result ? 'Replaced' : 'Not Replaced';
 
     gutil.log(_result + ' ' + gutil.colors.cyan(from) + (to ? (' to ' + gutil.colors.cyan(to)) : '') + ' in file: ' + gutil.colors.magenta(fileName));
 

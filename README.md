@@ -58,12 +58,29 @@ gulp.task('replace_2', function() {
 
 ```
 
+### Exampe with options object
+```javascript
+
+var options = {
+  logs: {
+    enabled: false
+  }
+};
+
+gulp.task('replace_1', function() {
+  gulp.src(["./config.js"]) // Every file allown.
+    .pipe(replace('environment', 'dev', options)
+    .pipe(gulp.dest('./build/config.js'))
+});
+
+```
+
 ### API
 
-#### replace(string, replacement)
+#### replace(pattern, replacement, options)
 
-##### string
-Type: `String`
+##### pattern
+Type: `String` or `RegExp`
 
 The string to search for.
 
@@ -72,26 +89,27 @@ Type: `String` or `Function`
 
 The replacement string or function. Called once for each match.
 
-#### replace(regex, replacement)
+##### options
+Type: `Object`
 
-##### regex
-Type: `RegExp`
+###### options.logs.enabled
+Type: `Boolean`, Default: `true`
 
-More details here: [MDN documentation for RegExp].
+Displaying logs.
 
-##### replacement
-Type: `String` or `Function`
+###### options.logs.notReplaced
+Type: `Boolean`, Default: `true`
 
-More details here: [MDN documentation for String.replace].
+Displaying "not replaced" logs.
 
-
+More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2016-09-24  v0.2.0  Added options object.
  * 2016-09-09  v0.1.1  Reorganization of files along with minor cosmetic changes.
  * 2016-03-09  v0.1.0  Initial version of plugin.
 
-
-Task submitted by [Tomasz Czechowski](http://czechowski.pl/)
+Task submitted by [Tomasz Czechowski](http://czechowski.pl/). License MIT.
 
 [MDN documentation for RegExp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 [MDN documentation for String.replace]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_string_as_a_parameter
