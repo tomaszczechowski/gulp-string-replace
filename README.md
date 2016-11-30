@@ -98,13 +98,14 @@ Type: `Boolean`, Default: `true`
 Displaying logs.
 
 ###### options.logs.notReplaced
-Type: `Boolean`, Default: `true`
+Type: `Boolean`, Default: `false`
 
 Displaying "not replaced" logs.
 
 More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2016-11-30  v0.3.0  Default value for "notReplaced" set to "false".
  * 2016-09-24  v0.2.0  Added options object.
  * 2016-09-09  v0.1.1  Reorganization of files along with minor cosmetic changes.
  * 2016-03-09  v0.1.0  Initial version of plugin.

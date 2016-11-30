@@ -16,7 +16,7 @@ var through = require('through2')
 var defaultOptions = {
   logs: {
     enabled: true,
-    notReplaced: true
+    notReplaced: false
   }
 };
 
