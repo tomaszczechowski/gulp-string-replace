@@ -105,6 +105,7 @@ Displaying "not replaced" logs.
 More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2017-01-04  v0.3.1  Improved documentation. Removed duplicated comments & Fixed typo.
  * 2016-11-30  v0.3.0  Default value for "notReplaced" set to "false".
  * 2016-09-24  v0.2.0  Added options object.
  * 2016-09-09  v0.1.1  Reorganization of files along with minor cosmetic changes.
