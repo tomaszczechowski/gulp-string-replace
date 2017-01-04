@@ -11,19 +11,19 @@ npm install gulp-string-replace --save-dev
 var replace = require('gulp-string-replace');
 
 gulp.task('replace_1', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"]) // Any file globs are supported
     .pipe(replace(new RegExp('@env@', 'g'), 'production'))
     .pipe(gulp.dest('./build/config.js'))
 });
 
 gulp.task('replace_2', function() {
-  gulp.src(["./index.html"]) // Every file allown.
+  gulp.src(["./index.html"])
     .pipe(replace(/version(={1})/g, '$1v0.2.2'))
     .pipe(gulp.dest('./build/index.html'))
 });
 
 gulp.task('replace_3', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"])
     .pipe(replace(/foo/g, function () {
         return 'bar';
     }))
@@ -33,7 +33,7 @@ gulp.task('replace_3', function() {
 ### String Replace
 ```javascript
 gulp.task('replace_1', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"])
     .pipe(replace('environment', 'production'))
     .pipe(gulp.dest('./build/config.js'))
 });
@@ -41,7 +41,7 @@ gulp.task('replace_1', function() {
 ### Function Replace
 ```javascript
 gulp.task('replace_1', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"])
     .pipe(replace('environment', function () {
         return 'production';
     }))
@@ -49,7 +49,7 @@ gulp.task('replace_1', function() {
 });
 
 gulp.task('replace_2', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"])
     .pipe(replace('environment', function (replacement) {
         return replacement + '_mocked';
     }))
@@ -68,7 +68,7 @@ var options = {
 };
 
 gulp.task('replace_1', function() {
-  gulp.src(["./config.js"]) // Every file allown.
+  gulp.src(["./config.js"])
     .pipe(replace('environment', 'dev', options)
     .pipe(gulp.dest('./build/config.js'))
 });
