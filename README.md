@@ -88,6 +88,7 @@ The string to search for.
 Type: `String` or `Function`
 
 The replacement string or function. Called once for each match.
+Function has access to regex outcome (all arguments are passed).
 
 ##### options
 Type: `Object`
@@ -105,6 +106,7 @@ Displaying "not replaced" logs.
 More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2017-01-19  v0.4.0  Passed entire regex outcome to replace function.
  * 2017-01-04  v0.3.1  Improved documentation. Removed duplicated comments & Fixed typo.
  * 2016-11-30  v0.3.0  Default value for "notReplaced" set to "false".
  * 2016-09-24  v0.2.0  Added options object.
