@@ -44,7 +44,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
 
     var _replaceTo = function (replacement) {
       if (typeof replaceTo === 'function') {
-        var replaceFunctionResult = replaceTo.call(replaceTo, replacement);
+        var replaceFunctionResult = replaceTo.apply(replaceTo, arguments);
 
         log(true, replacement, replaceFunctionResult, fileName);
 
