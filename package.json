@@ -1,6 +1,6 @@
 {
   "name": "gulp-string-replace",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/tomaszczechowski/gulp-string-replace#readme",
   "description": "Replace strings in files by using string or regex patterns.",
   "main": "index.js",
@@ -31,8 +31,10 @@
     "url": "https://github.com/tomaszczechowski/gulp-string-replace/issues"
   },
   "dependencies": {
+    "chalk": "^2.3.0",
     "extend": "^3.0.0",
-    "gulp-util": "^3.0.7",
+    "fancy-log": "^1.3.2",
+    "plugin-error": "^0.1.2",
     "replacestream": "^4.0.0",
     "through2": "^2.0.1"
   }

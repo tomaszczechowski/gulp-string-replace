@@ -2,7 +2,7 @@
  * Gulp String Replace
  * https://github.com/tomaszczechowski/gulp-string-replace
  *
- * Copyright (c) 2016 Tomasz Czechowski
+ * Copyright by Tomasz Czechowski
  * MIT license.
  */
 
@@ -10,7 +10,9 @@
 
 var through = require('through2')
   , rs = require('replacestream')
-  , gutil = require('gulp-util')
+  , chalk = require('chalk')
+  , fancyLog = require('fancy-log')
+  , PluginError = require('plugin-error')
   , extend = require('extend');
 
 var defaultOptions = {
@@ -26,9 +28,13 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
   var log = function (result, from, to, fileName) {
     if (!options.logs.enabled || (!options.logs.notReplaced && !result)) return;
 
-    var _result = result ? 'Replaced' : 'Not Replaced';
+    var _result = result ? 'Replaced:' : 'Not Replaced:';
+    var _from = '"' + chalk.cyan(from) + '"';
+    var _to = to
+      ? (' to "' + chalk.cyan(to) + '"')
+      : '';
 
-    gutil.log(_result + ' ' + gutil.colors.cyan(from) + (to ? (' to ' + gutil.colors.cyan(to)) : '') + ' in file: ' + gutil.colors.magenta(fileName));
+    fancyLog(_result + ' ' + _from + _to + ' ' + 'in a file: ' + chalk.magenta(fileName));
 
     return true;
   };
@@ -70,7 +76,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
 
         file.contents = new Buffer(contents);
       } catch (e) {
-        return callback(new gutil.PluginError('gulp-string-replace', e));
+        return callback(new PluginError('gulp-string-replace', e));
       }
     }
 
