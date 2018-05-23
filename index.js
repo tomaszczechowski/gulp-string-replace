@@ -16,7 +16,7 @@ var through = require('through2')
   , extend = require('extend');
 
 var defaultOptions = {
-  replaceMethod: 'regex', // 'regex' or 'string'
+  searchValue: 'regex', // 'regex' or 'string'
   logs: {
     enabled: true,
     notReplaced: false
@@ -67,7 +67,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
         var contents = String(file.contents);
         var noticedInCode = false;
 
-        if (options.replaceMethod === 'regex') {
+        if (options.searchValue === 'regex') {
           replaceFrom = replaceFrom instanceof RegExp
             ? replaceFrom
             : new RegExp(replaceFrom, 'g');
@@ -75,7 +75,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
           noticedInCode = replaceFrom.test(contents);
         }
 
-        if (options.replaceMethod === 'string') {
+        if (options.searchValue === 'string') {
           noticedInCode = contents.indexOf(replaceFrom) > -1;
         }
 
