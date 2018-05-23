@@ -74,7 +74,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
           log(false, regex, false, fileName);
         }
 
-        file.contents = new Buffer(contents);
+        file.contents = new Buffer.from(contents);
       } catch (e) {
         return callback(new PluginError('gulp-string-replace', e));
       }
