@@ -75,6 +75,20 @@ gulp.task('replace_1', function() {
 
 ```
 
+```javascript
+
+var options = {
+  searchValue: 'string'
+};
+
+gulp.task('replace_1', function() {
+  gulp.src(["./config.js"])
+    .pipe(replace('(some value here /* ignore by sth */)(', 'dev', options)
+    .pipe(gulp.dest('./build/config.js'))
+});
+
+```
+
 ### API
 
 #### replace(pattern, replacement, options)
@@ -93,6 +107,9 @@ Function has access to regex outcome (all arguments are passed).
 ##### options
 Type: `Object`
 
+###### options.searchValue
+Type: `string`, Default: `regex`, Options: `regex` or `string`
+
 ###### options.logs.enabled
 Type: `Boolean`, Default: `true`
 
@@ -106,6 +123,7 @@ Displaying "not replaced" logs.
 More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2018-05-24  v1.1.0  Replaced buffer with buffer.from. Added searchValue option.
  * 2017-12-31  v1.0.0  Removed a gulp-util, clean up and released v1.0.0
  * 2017-11-19  v0.4.0  Passed entire regex outcome to replace function.
  * 2017-01-04  v0.3.1  Improved documentation. Removed duplicated comments & Fixed typo.
