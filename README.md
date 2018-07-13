@@ -124,6 +124,7 @@ Displaying "not replaced" logs.
 More details here: [MDN documentation for RegExp] and [MDN documentation for String.replace].
 
 ### Release History
+ * 2018-07-13  v1.1.1  Moved gulp into devDependencies.
  * 2018-05-24  v1.1.0  Added support for node 8+ by replacing buffer with buffer.from. Added searchValue option. Updated dependencies.
  * 2017-12-31  v1.0.0  Removed a gulp-util, clean up and released v1.0.0
  * 2017-11-19  v0.4.0  Passed entire regex outcome to replace function.
