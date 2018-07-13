@@ -134,7 +134,7 @@ More details here: [MDN documentation for RegExp] and [MDN documentation for Str
  * 2016-09-09  v0.1.1  Reorganization of files along with minor cosmetic changes.
  * 2016-03-09  v0.1.0  Initial version of plugin.
 
-Task submitted by [Tomasz Czechowski](http://czechowski.pl/). License MIT.
+Task submitted by [Tomasz Czechowski](https://twitter.com/t_czechowski). License MIT.
 
 [MDN documentation for RegExp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 [MDN documentation for String.replace]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_string_as_a_parameter
