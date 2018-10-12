@@ -58,7 +58,7 @@ module.exports = function (replaceFrom, replaceTo, userOptions) {
     };
 
     if (file.isStream()) {
-      file.contents = file.contents.pipe(rs(search, replacement));
+      file.contents = file.contents.pipe(rs(replaceFrom, _replaceTo));
       return callback(null, file);
     }
 
